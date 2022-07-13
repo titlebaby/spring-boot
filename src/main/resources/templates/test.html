@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<!--<html xmlns:th="http://www.thymeleaf.org">-->
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Good Thymes Virtual Grocery</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <!--    <link rel="stylesheet" type="text/css" media="all"-->
+    <!--          href="../../css/gtvg.css" th:href="@{/css/gtvg.css}" />-->
+</head>
+
+<body>
+<!--变量标红的原因是,因为这个时候并没有程序运行.-->
+
+<!--要问题在于要给html文件一个提示这个东西已经注入了就可以了。
+只要在代码前面加上类似的注释就可以了哟！加注释的方法也非常简单只要 alt 键加回车就好哟！-->
+
+<!--/*@thymesVar id="msg" type="java"*/-->
+<div th:text="${msg}">Welcome to our grocery store!</div>
+<h3 th:each="user:${users}" th:text="${user}"></h3>
+<p>nihao</p>
+
+
+</body>
+
+</html>
