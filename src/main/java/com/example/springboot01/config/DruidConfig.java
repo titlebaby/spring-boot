@@ -10,6 +10,9 @@ import org.springframework.context.annotation.Configuration;
 import javax.sql.DataSource;
 import java.util.HashMap;
 
+/**
+ * 使用druid的监控时 必须配置的
+ */
 @Configuration
 public class DruidConfig {
 /*    @ConfigurationProperties(prefix="spring.datasource")
