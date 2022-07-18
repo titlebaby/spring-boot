@@ -1,22 +1,38 @@
-# @ConfigurationProperties(prefix="person")
-person:
-  name: qinjiang
-  age: 3
-  happy: false
-  birth: 2022/02/1
-  maps: {k1: v1, k2: v2}
-  lists:
-    - code
-    - music
-    - girl
-  dog:
-    name: 旺财
-    age: 3
-
-
 spring:
-  activemq:
-    non-blocking-redelivery: false
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://localhost:3306/test?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+#    type: com.alibaba.druid.pool.DruidDataSource
+#
+#    poolPreparedStatements: true
+#    filters: stat,wall,log4j  # 防止sql注入的
+#    maxPoolPreparedStatementPerConnectionSize: 20
+
+
+
+
+
+# @ConfigurationProperties(prefix="person")
+#person:
+#  name: qinjiang
+#  age: 3
+#  happy: false
+#  birth: 2022/02/1
+#  maps: {k1: v1, k2: v2}
+#  lists:
+#    - code
+#    - music
+#    - girl
+#  dog:
+#    name: 旺财
+#    age: 3
+#
+#
+#spring:
+#  activemq:
+#    non-blocking-redelivery: false
 
 #  mvc:
 #    static-path-pattern: /hello/

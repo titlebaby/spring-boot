@@ -23,13 +23,13 @@ class MyMvcConfigurer implements WebMvcConfigurer {
     }
 
     //拦截器
-    @Override
-    public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(new LoginHandlerInterceptor())
-                .addPathPatterns("/**")
-                .excludePathPatterns("/index.html","/","/user/login","/css/*","/js/**","/img/**");
-//        WebMvcConfigurer.super.addInterceptors(registry);
-    }
+//    @Override
+//    public void addInterceptors(InterceptorRegistry registry) {
+//        registry.addInterceptor(new LoginHandlerInterceptor())
+//                .addPathPatterns("/**")
+//                .excludePathPatterns("/index.html","/","/user/login","/css/*","/js/**","/img/**");
+////        WebMvcConfigurer.super.addInterceptors(registry);
+//    }
 }
 /*
 package com.example.springboot01.config;

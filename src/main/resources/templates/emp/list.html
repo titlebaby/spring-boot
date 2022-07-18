@@ -73,7 +73,7 @@
 									<td th:text="${#dates.format(emp.getBirth(),'YYYY-mm-dd HH:mm:sss')}">sit</td>
 									<td>
 										<a class="btn btn-sm btn-primary" th:href="@{/emp/}+${emp.id}">编辑</a>
-										<a class="btn btn-sm btn-danger" th:href="@{/delemp/}+${emp.id}"></a>
+										<a class="btn btn-sm btn-danger" th:href="@{/delemp/}+${emp.id}"> 删除</a>
 									</td>
 								</tr>
 
