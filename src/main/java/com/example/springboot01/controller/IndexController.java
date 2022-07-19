@@ -11,15 +11,17 @@ import java.util.Arrays;
 @Controller
 public class IndexController {
 
-    @RequestMapping({"/","/index.html"}) // 这要配置是可以应用 index.html 但是没有css的样式
-    public String index(){
-        return "index";
+    @RequestMapping({"/", "/index.html"}) // 这要配置是可以应用 index.html 但是没有css的样式
+    public String index() {
+//        return "index";
+        return "auth-views/index";
     }
-//    使用视图解析器接接管 替代
+
+    //    使用视图解析器接接管 替代
     @RequestMapping("/test")
-    public String test(Model model){
-        model.addAttribute("users", Arrays.asList("zhangsan","lisi","wangwu"));
-        model.addAttribute("msg","hello world 123!");
+    public String test(Model model) {
+        model.addAttribute("users", Arrays.asList("zhangsan", "lisi", "wangwu"));
+        model.addAttribute("msg", "hello world 123!");
 
         return "test";
     }

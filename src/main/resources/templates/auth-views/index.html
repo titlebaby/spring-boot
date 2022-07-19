@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<!--<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">-->
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+</head>
+<body>
+<div class="ui container">
+    <h1>首页</h1>
+    <p>首页</p>
+    <div class="ui">
+        <div sec:authorize="!isAuthenticated()">
+            <a th:href="@{/toLogin}">
+            <span class="ui-button btn-sm">
+                登陆
+            </span>
+            </a>
+        </div>
+        <div sec:authorize="isAuthenticated()">
+            <a class="item">
+            用户名：<sapn sec:authentication="name"></sapn>
+<!--                角色：<span sec:authentication="principal.getAuthorities()"></span>-->
+            </a>
+
+        </div>
+
+
+        <div sec:authorize="isAuthenticated()">
+        <a th:href="@{/logout}">
+        <span class="ui-button btn-dark">
+            注销
+        </span>
+        </a>
+        </div>
+
+    </div>
+    <div class="row">
+        <span></span>
+        <div class="col" sec:authorize="hasRole('vip1')">
+            <a th:href="@{/level1/1}">level1</a>
+        </div>
+       <div sec:authorize="hasRole('vip2')">
+           <a th:href="@{/level2/1}">level2</a>
+       </div>
+        <div sec:authorize="hasRole('vip3')">
+            <a th:href="@{/level3/1}">level3</a>
+        </div>
+
+
+    </div>
+</div>
+
+</body>
+</html>

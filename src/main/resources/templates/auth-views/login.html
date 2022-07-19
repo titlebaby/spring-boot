@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>菜鸟教程(runoob.com)</title>
+</head>
+<body>
+
+<h1>登陆页面</h1>
+<p>登陆页面。</p>
+<div>
+    <form method="post" th:action="@{/login}"  class="loginForm">
+        <div class="field">
+            <label class="loginLabel">user</label>
+            <input type="text" name="username" class="loginInput" placeholder="会员名/邮箱/手机号">
+        </div>
+        <div class="field">
+            <label  class="loginLabel">password</label>
+            <input type="password" name="password" class="loginInput">
+
+        </div>
+        <input type="checkbox" name="remember"/> 记住我
+        <input type="submit" class="ui-button" value="登 录">
+    </form>
+</div>
+
+
+</body>
+</html>
